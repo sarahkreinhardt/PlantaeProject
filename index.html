@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plantae</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            @font-face {
+                font-family: "Futura Bk BT";
+                src: url('fonts/Futura-Book-BT.ttf');
+                src: url('fonts/Futura-Book-BT.ttf') format('truetype');
+            }
+        h1 {
+        font-family: 'Futura';
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;  
+        }
+        
+        
+        h2{
+        font-family: 'Futura Md BT';
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        
+        
+        h3{
+        font-family: 'Futura Md BT';
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        
+        
+        h4{
+        font-family: 'Futura Md BT';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        
+        
+        h5{
+        font-family: 'Futura Bk BT';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        
+        
+        h6{
+        font-family: 'Futura Bk BT';
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0;
+        }
+        
+        
+        p{
+        font-family: 'Futura Bk BT';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        .p1 {
+            font-family: 'Futura Bk BT';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+        }
+        
+        .p2{
+            font-family: 'Futura Bk BT';
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        header{
+            z-index: 1;
+            position:fixed;
+            max-width: 390px;
+            background-color: #FFFFFF;
+        }
+        .battery{
+            width: 100%;
+            background-color: #FFFFFF;
+            top:0%;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        .topMenu{
+            flex-direction: row;
+        }
+        .menu{
+            width: 100%;
+            background-color: #FFFFFF;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 16px;
+        }
+        .navBar{
+            width: 100%;
+            background-color: #FFFFFF;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 32px;
+            text-align: center;
+        }
+        button {
+            height: 37px;
+            width: 160px;
+            border-radius: 50px;
+            border: none;
+        }
+        .notSelected {
+            background: #D2E4DA;
+        }
+        .selected {
+            background: #456955;
+            color: white;
+        }
+        .careHistoryPage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 60px;
+
+            position: absolute;
+            width: 358px;
+            height: 2103px;
+            margin: 0 16px;
+            top: 258px;
+        }
+        .plantPhotoBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            margin: 0 16px;
+            gap: 8px;
+
+            width: 326px;
+            height: 302px;
+        }
+        .buttonBox {
+            width: 326px;
+            left: 0px;
+            top: 0px;
+            border-radius: 0px;
+        }
+        .darkBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #413B3E;
+            color: white;
+            padding: 16px;
+
+            width: 358px;
+            border-radius: 16px;
+        }
+        .darkBoxTitle {
+            margin: 16px 0;
+            font-family: 'Futura Md BT';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        .subtitleKeyRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .tipBox {
+            align-items: center;
+            padding: 32px 16px;
+
+            width: 358px;
+            height: 92px;
+
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+        }
+        .innerTipBox {
+            display: flex;
+            flex-direction: row;
+        }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <div class="battery">
+                <img src="images/StatusBar.png">
+            </div>
+            <div class="topMenu row">
+                <ul class="menu row">
+                    <li><img src="images/homeicon.png"></li>
+                    <li><img src="images/logosm.png"></li>
+                    <li><img src="images/settingsicon.png"></li>
+                </ul>
+                <ul class="navBar row">
+                    <li><img src="images/backicon.png"></li>
+                    <li><h1>"Twister"</h1></li>
+                    <li><img src="images/diaryicon.png"></li>
+                </ul>
+            </div>
+        </header>
+        <div class="careHistoryPage">
+            <div class="plantPhotoBox">
+                <div class="buttonBox">
+                    <button class="notSelected p1">More about Twister</button>
+                    <button class="selected p1">Care history</button>
+                </div>
+                <img src="images/hawthornia.png">
+                <div class="p1">Haworthiopsis attenuata</div>
+            </div>
+            <div class="darkBox">
+                <div class="darkBoxTitle"> <h4 >Keep track of the last time you watered:</h4> </div>
+                <div class="p1">Water log</div>
+                <img src="images/calendar.png">
+                <div class="subtitleKeyRow">
+                    <img src="images/watericon.png">
+                    <h6>You’ve watered every day this week!</h6>
+                </div>
+            </div>
+            <div class="darkBox">
+                <h4 class="darkBoxTitle h4">Tracking “Twister” over time:</h4>
+                <img src="images/chart.png">
+                <div style="width: 100%;">
+                    <div class="subtitleKeyRow">
+                        <img src="images/watericon.png">
+                        <h6>Water</h6>
+                    </div>
+                    <div class="subtitleKeyRow">
+                        <img src="images/watericon.png">
+                        <h6>Sunlight</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="tipBox">
+                <div class="innerTipBox">
+                    <div>
+                        <img src="images/Sun.png ">
+                    </div>
+                    <div class="p2"><span style="font-weight: bold;">Tip: </span>Twister thrives in bright indirect to direct light!</div>
+                </div>
+            </div>
+            <div class="darkBox">
+                <h4 class="darkBoxTitle h4">Healthy plants, happy life!</h4>
+                <div class="p1">Keep an eye on Twister’s soil health</div>
+                <img src="images/circle-graph.png">
+                <div style="width: 100%;">
+                    <div class="subtitleKeyRow">
+                        <img src="images/watericon.png">
+                        <h6>Potassium (K) 10%</h6>
+                    </div>
+                    <div class="subtitleKeyRow">
+                        <img src="images/watericon.png">
+                        <h6>Phosphorous (P) 10%</h6>
+                    </div>
+                    <div class="subtitleKeyRow">
+                        <img src="images/watericon.png">
+                        <h6>Nitrogen (N) 10%</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="tipBox">
+                <div class="innerTipBox">
+                    <div>
+                        <img src="images/gardening.png ">
+                    </div>
+                    <div class="p2"><span style="font-weight: bold;">Tip: </span> Choosing the right fertilizer is important for your plants health. The next time you’re out for fertilizer for Twister, just remember “10-10-10”.</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
